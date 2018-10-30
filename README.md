@@ -11,6 +11,12 @@ Some got it working on ARCH.
 
 I got it working on Ubuntu.
 
+VMWare (HOME/eval edition), VirtualBox, Basilisk and Sheepshaver will have to be download seperatly from the projects distinctive websites. 
+Basilisk and Sheepshaver code changes too much and isnt posted here on GH (that I know).
+
+Virtualbox, QEMU, and libVirt(kernel) are in the repoes for your UNICE OS somewhere.  If not, build them.  You may be able to find binaries for other OSes.
+
+
 Caveat:
 
 		Gigabyte UDER(UDDER) boards will have a IOMMU vs USB3 conflict. Turn one or the other on, not both in BIOS.
@@ -100,13 +106,16 @@ Those familier with dos should be able to use them, syntax is a little different
 
 
 
-VMDK conversion is only necessary for VBox. QEMU doesnt care and snapshots are a PITA console command with QEMU- so be aware of this.
-libVirt will allow it, provided these conditions are NOT met.
+VMDK conversion is only necessary for VBox. 
+
+QEMU doesnt care and snapshots are a PITA console command with QEMU- so be aware of this.
+
+libVirt will allow snapshots, provided these conditions are NOT met.
 
 (no snapshots if this is TRUE)
 
-VFIO in UEFI- Unknown hardware state of real hardware video device
-VM is running(must be off)
+		VFIO in UEFI- Unknown hardware state of real hardware video device
+		VM is running(must be off)
 
 Qemu does have a GUI, but its intermittent if the menu shows up. I use verison 3.
 (You need a few libraries under Ubuntu to get it all up and running correctly.)
