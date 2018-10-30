@@ -58,7 +58,7 @@ The OSes you keep in you NAS are your business,not mine.
 	Sound is dodgy and may or may not work. SORRY.
 	
 
-Hardware Caveat:
+## Hardware Caveat:
 
 		Gigabyte UDER(UDDER) boards will have a IOMMU vs USB3 conflict. Turn one or the other on, not both in BIOS.
 		Intel VT warnings can be bypassed or ignored if your (AMD) cpu is new enough.
