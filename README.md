@@ -17,14 +17,53 @@ Basilisk and Sheepshaver code changes too much and isnt posted here on GH (that 
 Virtualbox, QEMU, and libVirt(kernel) are in the repoes for your UNICE OS somewhere.  If not, build them.  You may be able to find binaries for other OSes.
 
 
-Caveat:
+### CDs? Disks?
+
+UH YEAH---PCs need these.... lol
+
+You will have to download at least an ISO, if not burn it to disc.
+
+		If you are quesy about the process, start with a UBUNTU or debian (sparky??) LIVE cd
+
+
+CDROM and HDD is a requirement, how you store the DATA is irrelevant.
+Follow these methods. Formatting is "VIRTUAL" if you do it correctly. You arent partitioning "physically" anything.
+
+This said:
+
+	YOU are responsible for your data and if you hook up an ACTUAL DISK, PLEASE BE CAREFUL.
+	You are given the option to do so- and it clearly works.
+
+BUT BUT BUT... my journey started awhile ago..YMMV. Whether yours is short or very long is up to you.
+The OSes you keep in you NAS are your business,not mine.
+
+### Processors
+
+	I use core2duo or Penryn, the upgraded one most of the time.
+	UBUNTU and SuSe and Fedora dont really care.
+	
+### Memory
+
+	YES- BUY MORE! (or allocate more if you can)
+	DO NOT setup hugepages or increase the value of it. IT WILL CRASH YOUR SYSTEM if you do so.
+
+### VRAM   	
+
+	This is only possible with VFIO on UEFI HOST systems(the real hardware) , UEFI compaqtible BIOSes, and UEFI guests(inside).
+	You need more than one video card.
+	These methods should work for you, with some caveats noted in other places of the web.
+	
+### Sound
+
+	Sound is dodgy and may or may not work. SORRY.
+	
+
+Hardware Caveat:
 
 		Gigabyte UDER(UDDER) boards will have a IOMMU vs USB3 conflict. Turn one or the other on, not both in BIOS.
 		Intel VT warnings can be bypassed or ignored if your (AMD) cpu is new enough.
-ROG:
 	
-		I cant get the thing to reliably boot linux properly.
-		Manufacturer doesnt care.
+		ROG: I cant get the thing to reliably boot linux properly.  Manufacturer doesnt care.
 		
 				
 Apple:
