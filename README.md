@@ -22,6 +22,7 @@ ROG:
 		
 				
 Apple:
+
 		Pre OSX devices are abandonded by Apple. Caveat Emptor- but a hackers paradise.
 		You are "supposed to" run OSX on OSX compatible hardware like a mac mini or Pro tower. 
 		(Non-fake) "SMC keys are embedded in apple products and your not supposed to distribute them".
