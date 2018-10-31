@@ -60,6 +60,14 @@ What you see is being pulled back (mirrored thru QXL) from VRAM of the chip used
 
 (The rest may be incompatible or aged chips.)
 
+## NO!
+
+Radeon HD 7850 and earlier cards are **NOT UEFI** and they-must-be for this to work!!
+
+		(There is a label on the chip itself to indicate this)
+		This said: It doesnt guarantee your card is compatible, but in theory it should be.
+
+
 Yes- you can use a REAL HARD DRIVE!
 
 -Have FUN!

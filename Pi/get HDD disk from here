@@ -1,0 +1,18 @@
+https://www.raspberrypi.org/downloads/raspbian/
+
+Do you want X -or not- is the question.
+
+courtesy (https://blog.agchapman.com/using-qemu-to-emulate-a-raspberry-pi/):
+
+
+convert to qcow format:
+qemu-img convert -f raw -O qcow2 2017-08-16-raspbian-stretch-lite.zip raspbian-stretch-lite.qcow
+(I use VBox tools, same difference)
+
+Expand it(goes for any drive, esp qcow format):
+(unlike FATcow aka vmdk-this stretches to this size, doesnt occupy it)
+
+qemu-img resize raspbian-stretch-lite.qcow +6G
+
+
+fire it up and letter rip.
