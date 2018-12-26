@@ -1,0 +1,25 @@
+Linux guest modules addtions:
+(debian based, install build-essential and the vbox guest packages via synaptic)
+
+Fedoras:
+*=hit tab
+
+sudo dnf distro-sync
+
+install headers:(fedora wants to force too new a kernel, backdate one, then freeze it)
+sudo dnf -y install kernel-devel kernel-headers dkms gcc gcc-c++
+
+insert guest cd
+cd /media/me/VB*
+or cd /run/media/me/VB*
+
+sudo VBoxLin*
+
+-only when successful-
+reboot
+mkdir vboxshared
+sudo mount -t vboxsf <sharename> ./vboxshared 
+
+(files should show up now)
+
+Cent is RHEL (RED HAT ENTERPRISE LINUX) wo the "corporate tweaks"

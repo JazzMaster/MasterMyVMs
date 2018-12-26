@@ -1,0 +1,20 @@
+this is a bitch to get working!!!
+
+UEFI only likes things a certain way
+non-UEFI likes things another way
+
+-fuck either up and you cant install 8
+
+UEFI wants enforced WHQL drivers and the discs are NOT!
+msconfig -> recover-> boot options
+3 menus deeper ->disable enforcement(7)
+
+either way:
+
+extract radeon drivers-
+    manuallly install all inf files
+
+hard reboot everything-vfio takes but hangs.
+
+UEFI should allow disconnect of qxl.
+seabios DOES NOT.

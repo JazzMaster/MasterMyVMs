@@ -1,0 +1,9 @@
+this is the net insall image:
+
+the installer probing mirrors section will FAIL:
+
+requires another computer to fix the apt pgp key bug-keyring package has to be forced installed.
+then updated with the apt repo at: ports.debian.org, not debian.org.
+
+only the ports archive has the needed ppc32 files. debian servers no longer maintain them.
+

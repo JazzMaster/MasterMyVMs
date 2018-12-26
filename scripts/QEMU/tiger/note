@@ -1,0 +1,11 @@
+This works but its a bitch.
+
+force create a vmdk file(qcow doesnt work here)
+check that its vmdk and you didnt screw anything up
+
+then boot the dvd-and format the full capacity(with os9 drivers, of course!)
+the rest should be normal for PPC.
+
+For Intel-
+
+you need a hacked installer disc.(deadmoo+)

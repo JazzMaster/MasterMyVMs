@@ -1,0 +1,11 @@
+  - Mirror:         ftp.debian.org
+  - Hostname:       debian-powerpc
+  - Root password:  root
+  - User account:   user
+  - User password:  user
+
+buster- although runable- isnt included because ATI hardware not supported.
+However- ppc emu uses raw output-to SDL, so we may have a workaround.
+
+Note that this WILL NOT work on real hardware-the ATi driver w forced modesetting WILL NOT WORK.
+Only pre-stretch (9) images will.

@@ -1,0 +1,54 @@
+This is PoC(proof of concept) from xqemu GH page.
+Two pics from xqemu working- or trying to work(v1 msft bios)- are here.
+
+(I keep all my emus together)
+
+There is a needed BIN BOOT FILE:
+
+        its in a pastebin in UUENCODE format. UUDECODE IT. LET IT COMPLAIN.
+        TWO bits need to be changed, as per xqemu webpage, (not GH xqemu page) and the poster giving you the data.
+(        a hexeditor can hack this in 20 seconds.HINT: its the first and last, and THESE PEOPLE TELL YOU what to set.)
+
+
+currently requires bios version 1(with factory hdd settings) or a hacked rom file(eurasia?? from YOU?) for softmod boot.
+
+I have a v1.6 eeprom-eeprom is ignored if the drive is "made from data" and "not locked" during processing.
+You can do this-
+        IF and ONLY IF you already have a modded console.
+        (ftp in and dump the HDD)
+
+(EEPROM can be acquired from modding tools, dumped- then FTPd over.)
+
+If you need help hacking-
+    1-USBmod a controller
+    2-add USB to a controller(prettier, but not easier)
+        use a kindle in "target disk mode"- the xbox will see and format it no problems(you may lose kindle functionality)
+(You standard softmodding tools and game saves from this point on.)
+
+
+(EEPROM should be the BIOS file used here)
+
+I have a v1.6 nDure Soft-modded box.SO, I have the files you will need.
+YOU will have to acquire them yourself, somehow -or this xqemu is useless.
+
+So- I urge you to go get one. Or Go MOD one.
+
+This said- nDure uses a buffer overflow to trip ungined code execution of an unsigned dash- then installs itself.
+A softmodded xbox (hardware) must then be flashed to boot the "modded unsigned code" somehow.
+
+Because if it isnt flashed then someone found a loophole that isnt emulated here.
+Note that v1 BIOS (MSFT dump) will not give error codes like v1.6 will.
+
+While I can boot to the menu-
+    It seems that Input isnt working.
+    Sound can be ignored- or via qemu passthru(possible?) sent over/thru HDMI.
+    Sound complains instead of working- seems to be like someone forgot to bitBang the "audio simulated hardware" correctly.
+(certain systems didnt have "official soundcards"-like older Macs)
+
+
+Will investigate further. Tests seem to indicate progress in many games.
+
+these GH C devs are beligerent asswhores who assume you have a real box torn apart by the bits-
+know everything about eeprom hacking and how every layer of encryption and processing works.
+
+confront w extreme predjudice!

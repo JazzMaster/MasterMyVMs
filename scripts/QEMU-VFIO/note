@@ -1,0 +1,13 @@
+the fedora /redhat virtial IO drivers disc is needed. (vio-cd.iso)
+(get it from REDHAT/Fedora download link)
+
+might want to keep your video drivers disc (or a dl copy of the installer) handy for the VFIO hardware as well.
+Im noticing cdrom access issues- but it might be my hardware being flaky.
+
+(heaven forbid this is a QEMU or UBUNTU problem.....which I believe it to be)
+
+a SMB or "samba share" on the linux side (properly configured and running as a daemon on boot) should ease the NEIGHBORHOOD.....
+map a few drives and you have a "virtual LAN".
+
+steam games can be moved.
+additional hdd (or cdroms) can also be added

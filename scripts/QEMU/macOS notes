@@ -1,0 +1,13 @@
+OS9 and OSX install mediums are non-OEM generic install media. You cant use OEM discs.
+Not every disc found online will work- either.
+
+Leopard is 32bit- here for compatibility.(iAtkos/kalyway and a common installer for OSX86)
+Snow is quasi 64bit and can be booted 32. If booted 64- can run 32 and 64bit apps.
+lion/ML and beyond require 64bit UEFI/vars..(and otherwise hacking w vmware/vbox.) as these were 64bit OSes
+beyond ML 7850(my chip) is supported- below it is NOT- therefore I have not included ML and below in the VFIO area.
+
+RX series(Polaris+) was not supported until Sierra.
+
+(Macs are slow to adopt new graphics chips.)
+
+

@@ -1,0 +1,10 @@
+audio:
+	AC97 - <Leopard
+	HDA(voodoo) - Snow >
+
+rtc: (snow) 32-bit rtc or rm ElliotForce.kext
+
+Ethernet: RTL8139 (or sungem)
+Patched USB drivers
+PS/2 Keyboard FIX
+

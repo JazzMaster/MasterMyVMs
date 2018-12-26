@@ -20,7 +20,7 @@ No VALVE- we arent cheating, "most of us..", this HELP us in everyday life.
 (I guess you guys like to waste another $1300 on another PC....)
 
 Some got it working on ARCH-Linux....
-**I got it working on Ubuntu(18).**
+**I got it working on Ubuntu(18).WELL, kinda. CDROM support is skippage.**
 
 VM (PC apps):
 
@@ -44,7 +44,8 @@ Macs need BLuetooth(emu or real) on modern macs and "serial ports" on older ones
 Virtualbox, QEMU, and libVirt(kernel) are in the repoes for your UNICE OS somewhere.  
 However, they are very old- so build them.  
 
-QEMU is on the main website, libvirt is HERE. I did this because files are hard to find.
+QEMU is on the main website, libvirt is HERE. 
+I did this because files are hard to find.
 
 You are on your own to look for ROM files for sheepshaver and basilisk-
 
@@ -61,12 +62,14 @@ So what if you dont have one?
 
         Try the Internet Archive
         Some other "non-torrent sites" have the ISO. Use google.
-        Google for some Linux you might want to try. THEY GIVE YOU THE ISO.
-        If you want to watse your money- go find a store selling computers. The software is called an "OS".
+        Google for some Linux you might want to try. HINT: debian,fedora....THEY GIVE YOU THE ISO.
+        If you want to waste your money- go find a store selling computers. The software is called an "OS".
     
 "Boot Floppies" may be needed.
 CDROM and HDD is a requirement.
 
+If you learned anything in "COMPTIA A+ plus" class- it is applied HERE.
+Most def - with PCem.
 
 Formatting is "VIRTUAL" (if you do it correctly). 
 You arent partitioning "physically" anything.
@@ -90,8 +93,10 @@ PCem note:
 			(I would still advise backporting the changes in the sourcecode and rebuilding)
 		
 		3- crack out the old textbooks(or dig thru your memory banks) because this is as "real" as it gets. LOL
-		4- although I havent fully tested Win9x,ME,NT, and Y2K- they should work fine.
-		5- a USB floppy drive *MAY* help here....sadly they only make 3 and 1/2 inch..
+			Pentium award bios seems to break or be lacking. CDROM booting is OUT. Large HDDs are OUT.
+		
+		4- although I havent fully tested Win9x,ME,NT- they should work fine.
+		5- a USB floppy drive *MAY* help here....sadly they only make 3 1/2 inch..
 		6- these systems are ancient!! 8088-486DX (w Pentium overdrive) so dont "expect much"
 		(These were mostly PRE-Windows and PRE-INTERNET ERA PCs.)
 		
@@ -103,14 +108,12 @@ PCem note:
 		(amazing-nobody has emulated THAT...)
 		
 		10- Data transfers were suboptimal. Again, dont expect much. (Nobody really cared about speed.)
+		(We are talking 1980-1999 era PCs here.)
 
 ### Processors
 
 I use siulated core2duo or Penryn, (the upgraded one) most of the time.
 
-UBUNTU and SuSe and Fedora dont really care.
-Avoid the -host option. QEMU snags a bit due to it (and glitches your real OS).
-	
 VBox will use "host" by default, so if youre having problems you will most likely have to hack the vm file.
 (this is also why some VM downloads are AMD only- the CPU is passed thru and not emulated)
 
@@ -140,7 +143,7 @@ You need more than one:
 
          video card
          mouse
-         keyboard
+         keyboard(different vendor ID/manufacturer)
          screen(how much better to see it working)
 
 -The rest is virtual
@@ -149,6 +152,13 @@ Dont blame me for "lockups" when QEMU "eats your first mouse and keyboard" thru 
 (its supposed to-thats not a lockup, its "usb redirection" at work)
 
 These methods should work for you, with some caveats noted in other places of the web.
+One-shot deals usually indicate keyboard and mouse not reconfigured post install
+	-or-
+Too much/not enough VFIO binding at play.
+(/etc/rc.local is your friend.)
+
+Fix the problem, reboot the physical machine, and try again.
+
 
 ## UEFI BIOS files:
 
@@ -167,14 +177,15 @@ QXL is primarilty used as a loopback video device- especially when in VFIO mode.
 If your VRAM in the OS is greater than 64MB- most likely above 256MB(in my case 4G), you DID THIS RIGHT.
 You just might want to remove the QXL and switch to the "normal driver".
 
-Lockups and crashes are not the VFIOd video chip in most circumstances, oddly its the USB input keyboard and mouse.
-Again, this is documented in the scripts- switch them post install.
+AMD RADEON NOTE:
+	some OSes required signature enforcement or refuse to install with supported hardware
+	and require manual intervention- but still turnover VFIO no problems.
 
 ### Sound
 
 	Sound is dodgy and may or may not work. SORRY.
-	Its more of a QEMU thing. libVirt can fix this on 32bit OSes, Ive yet to get it working on 64.
-
+	Its more of a QEMU thing. libVirt can fix this on 32bit OSes.
+	
         UEFI issue w TianoCore?
 		audio QEMU build settings? (testing, I have sources)
 
@@ -182,6 +193,7 @@ Again, this is documented in the scripts- switch them post install.
 
         If you are using a 64bit OS, you should be using VFIO and have available to you (as passthru)- the video cards audio chip.
         (Hookup a TV or projector instead of a PC monitor to bypass this issue)
+		THIS WORKS WELL.
 
 ## Hardware Caveat:
 
@@ -209,8 +221,9 @@ The software option in GRUB doesnt enable VFIO correctly "but will boot".
 
 ROG motherboards: 
 
-        I cant get the thing to reliably boot linux properly.  Manufacturer doesnt care.
+        **I cant get the thing to reliably boot linux properly. ** Manufacturer doesnt care.
 		If you find out how- let me know.
+		(Replace the motherboard)
 		
 Apple:
 
@@ -222,6 +235,7 @@ You are "supposed to" run OSX on OSX compatible hardware like a 'mac mini or Pro
 
 		(There is a FAKESMC kernel extension. You can use the keyDUmper source code if you like)
 		HINT: its an "ENGLISH sentence warning" with copywright notice embedded in an "ISA device"
+		(if you see this- you have a osmc key dumped correctly)
 
 QEMU:  
         
@@ -239,8 +253,9 @@ Cuss me out all you want INTEL folk- Im still effectually out-processing you and
 
 You may be able to google some working keys from yesteryear. 
 HOWEVER, dont expect "activation of windows" to work using these keys.
+(en mass install in corporate environment)
 
-If I ship or Torrent a VM it is with keys stripped out.
+If I ship it is with keys stripped out.
 There are legal reasons for this. 
 Find your own (or hack in your own at your own risk)- I dont care -but leave my keys out of it.
 
@@ -251,7 +266,7 @@ DO not try to emulate (or VM) any of this while running your OS under a VM.
 Howver, do feel fre to try them at home under your OS of choice.
 
 Do not be stupid with your chromebook and ask me(because it was freely given to you) where you can 
-run live versions of this thru the internet. 
+run live versions of this thru the internet. (Yes, theres ONE way to do this.)
 
 THIS IS HOW you 'try-before-buying'. Its called a VM.
 
@@ -261,8 +276,6 @@ The other method is to buy a cdrom drive and grab a LIVE CD.
 
 
 - I have had people ask me sone weird questions...
-
-YES- that QEMU script "does what it says it does", oddly.
 
 ## Basilisk
 
@@ -340,7 +353,6 @@ VMDK conversion is only necessary for VBox.
 QEMU doesnt care and snapshots are a "PITA console command" with QEMU- so be aware of this.
 
 
-
 libVirt will allow snapshots, provided the following conditions are NOT met.
 (no snapshots if this is TRUE)
 
@@ -359,9 +371,6 @@ Qemu does have a GUI.
 I have not tested these with VMWare and my OS scripts have not used VMWare or "VBox hacks" which are floating around.
 QEMU is easier to "hack" as it were.
 
-Win XP was the exception for my MD drive but with usb passthru(doesnt work w VBox) this shouldnt be a problem anymore.
-(lsusb -v to get the MiniDisc vendor ids for qemu- or use virt-manager usb redirect option)
-(This may be because VirtualBox doesnt catch USB events on "unknown" hardware.)
 
 Im running the following:
 
@@ -396,13 +405,12 @@ PCem should support them very well(386-486-Pentium ERA).
 
 If you are having CDROM issues-check a dd "dump" of it. 
 Your drive might not be reading the disc correcty.
-(I had to use my second BDROM drive to fix this.)
 
 
 These two are provided as TESTING from Microsoft to "test IE" with:
 
-            Win7(VBox)
-            Win8(VBox)
+            Win7(VBox/VFIO QEMU)
+            Win8(VBox/VFIO QEMU)
 
             https://developer.microsoft.com/en-us/microsoft-edge/tools/vms/
             (has a 90 day expiring demo key)
@@ -420,11 +428,11 @@ My installs are either "pulls from real computers" or "fresh installs".
 			Fedora (Twenties) (VBox, testing VFIO)
 			OS2 Warp (VBox/PCem?) ^ Rare ^
 
-            BeOS /Haiku (VBox/PCem)
+            BeOS /Haiku (VBox/PCem/QEMU)
             CentOS 7  (VBox)
             (RHEL w "community support" instead of "RH support" -its like Debian "server edition")
 			
-			Win10(QEMU w VFIO or VBox without it)
+			Win10(QEMU w VFIO/VBox)
 			
 			Mac OS8 (Sheepshaver/Basillisk)
 			Mac OS9.0.4(Sheepshaver)
@@ -468,3 +476,4 @@ Whether yours is short or very long is up to you.
 The OSes you keep in you NAS are your business,not mine.
 
 -Best of Luck
+
