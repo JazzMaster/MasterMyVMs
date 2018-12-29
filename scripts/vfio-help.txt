@@ -1,0 +1,8 @@
+there one thing I forgot to mention here:
+
+ok two-
+
+	some OSes still seems to be xchi/IOMMU bugged.
+	rc.local needs to have the vfio binding function- which was removed from these- and my files...OOPS.
+
+
