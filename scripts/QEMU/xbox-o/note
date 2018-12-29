@@ -10,7 +10,10 @@ There is a needed BIN BOOT FILE:
 (        a hexeditor can hack this in 20 seconds.HINT: its the first and last, and THESE PEOPLE TELL YOU what to set.)
 
 
-currently requires bios version 1(with factory hdd settings) or a hacked rom file(eurasia?? from YOU?) for softmod boot.
+currently requires bios version 1(with factory hdd settings). I have a bios file from a softmodded xbox but Im not sure this is used
+during the boot process or "just there" in drive E:\ndis.
+
+eurasia bios(not eeprom) may provide a softmod solution. The trick it seems is triggering dev mode.
 
 I have a v1.6 eeprom-eeprom is ignored if the drive is "made from data" and "not locked" during processing.
 You can do this-
