@@ -7,16 +7,26 @@ sudo update-initramfs -u
 
 -reboot-
 
-Details on the main README.
+your card card needs to be: (sudo dmesg| grep ....)
 
-These are the files you change for Unbuntu/Debian (and possibly Fedora).
+		on IOMMU group
+		vfio_pci (not stub) driver loaded
+		VFIO bound
+		
+or you cant VFIO with it.If you have errors- check these three items.
 
-there one thing I forgot to mention here:
+I forgot to mention:
 
-	some OSes still seems to be xchi/IOMMU bugged(AMD). copy grub boot vars verbatim.
-	
-	rc.local calls vfio binding function(once per boot). If you want to muck w unbinding and rebinding- YOU -DO- IT.
+	some OSes still seems to be xchi/IOMMU bugged(AMD). 
+	copy grub boot vars verbatim.
+	if you mis type them- or change them- this happens.
+	what is here works on gigabyte UD3R AMD FX board.	
+
+	rc.local calls vfio binding function(once per boot). 
+
+	If you want to muck w unbinding and rebinding- YOU -DO- IT.
 	I find that it mucks up the KVM/QEMU VFIO experience.
+
 	If you only bind once per boot- you can reboot the VFIOd VM no problem. NOT THE CASE otherwise.
 	however- you will not regain control of the stubbed or vfio video card.
 
