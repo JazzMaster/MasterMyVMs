@@ -13,14 +13,27 @@ What is here is detailed instructions (for demo purposes) on how to
         use VM trick and techniques to snapshot real OSes with REAL HARDWARE
         and how to simulate as many OSes as possible, albeit not at the same time.
 
-I also have instructions on "VFIO thru UEFI"- the new Linux gaming technique that doesnt waste a hard drive
-(if youve got a tower and a spare graphics card-its worth a try).
+#### What is VFIO? 
+VFIO stands for "Virtual Function I/O".
+VFIO is a device driver that is used to assign (reaal) devices to virtual machines. 
+One of the most common uses of vfio is setting up a virtual machine with full access to a dedicated GPU.
+(which is what were doing)
+
 
 No VALVE- we arent cheating, "most of us..", this HELP us in everyday life.
 (I guess you guys like to waste another $1300 on another PC....)
 
 Some got it working on ARCH-Linux....
-**I got it working on Ubuntu(18).WELL, kinda. CDROM support is skippage.**
+**I got it working on Ubuntu**
+
+[ARCH HOW-TO](https://bbs.archlinux.org/viewtopic.php?id=162768)
+
+
+Skippage CDROM access? 
+
+		It might be your OS(ubu 18)
+
+
 
 VM (PC apps):
 
@@ -244,7 +257,7 @@ QEMU:
 
 I have no issues as of yet emulating Mojave with my AMD FX CPU, it has on-die instruction support "above Mojave".
 Cuss me out all you want INTEL folk- Im still effectually out-processing you and AMD OCTO core DO EXIST.
-(Thats why I had the ROG board at first)
+Thats why I had the ROG board at first.
 
 
 ### KEYS? Its asking me for keys!!
@@ -428,8 +441,9 @@ My installs are either "pulls from real computers" or "fresh installs".
 			Fedora (Twenties) (VBox, testing VFIO)
 			OS2 Warp (VBox/PCem?) ^ Rare ^
 
-            BeOS /Haiku (VBox/PCem/QEMU)
+            BeOS /Haiku (VBox/PCem/QEMU) -There is a dual Intel/PPC image-
             CentOS 7  (VBox)
+            RedHat v5 (QEMU/PCem) -Ancient
             (RHEL w "community support" instead of "RH support" -its like Debian "server edition")
 			
 			Win10(QEMU w VFIO/VBox)

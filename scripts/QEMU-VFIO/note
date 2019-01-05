@@ -1,5 +1,9 @@
 the fedora /redhat virtial IO drivers disc is needed. (vio-cd.iso)
-(get it from REDHAT/Fedora download link)
+
+
+Info added to from examples like this:
+
+		https://passthroughpo.st/gpu-debian/
 
 might want to keep your video drivers disc (or a dl copy of the installer) handy for the VFIO hardware as well.
 Im noticing cdrom access issues- but it might be my hardware being flaky.
