@@ -29,7 +29,7 @@ Some got it working on ARCH-Linux....
 [ARCH HOW-TO](https://bbs.archlinux.org/viewtopic.php?id=162768)
 
 
-[Ubuntu 16 w virt-manger/KVM] (https://ycnrg.org/vga-passthrough-with-ovmf-vfio/)
+[Ubuntu 16 w virt-manger-KVM] (https://ycnrg.org/vga-passthrough-with-ovmf-vfio/)
 
 My scripts use QEMU straight- I find KVM/virt-manager can be a R-PITA.
 It also stores files(hidden) in XML format.
