@@ -1,0 +1,16 @@
+### This file is the template for /etc/initramfs-tools/modules.
+### It is not a configuration file itself.
+###
+# List of modules that you want to include in your initramfs.
+# They will be loaded at boot time in the order below.
+#
+# You must run update-initramfs(8) to effect this change.
+
+softdep amdgpu pre: vfio vfio_pci
+
+vfio
+vfio_iommu_type1
+vfio_virqfd
+vfio_pci ids=1002:699f,1002:aae0  
+amdgpu
+

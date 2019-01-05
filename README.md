@@ -27,12 +27,15 @@ Some got it working on ARCH-Linux....
 **I got it working on Ubuntu**
 
 [ARCH HOW-TO](https://bbs.archlinux.org/viewtopic.php?id=162768)
+[Ubuntu 16 w virt-manger/KVM] (https://ycnrg.org/vga-passthrough-with-ovmf-vfio/)
+
+My scripts use QEMU straight- I find KVM/virt-manager can be a R-PITA.
+It also stores files(hidden) in XML format.
 
 
 Skippage CDROM access? 
 
-		It might be your OS(ubu 18)
-
+		It might be your OS(ubu 18). LG BDROMs get buggy with 18.
 
 
 VM (PC apps):

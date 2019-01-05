@@ -1,0 +1,9 @@
+#add:
+
+vfio
+vfio_iommu_type1
+vfio_pci ids=1002:699f,1002:aae0
+vfio_virqfd
+kvm  
+kvm_amd
+#kvm_intel  
